@@ -37,17 +37,28 @@ public class GroupMembersDaoImp implements GroupMembersDao{
 	}
 
 	public List<Group_members> selectAll() {
-		// TODO Auto-generated method stub
-		return null;
+		String sql=" SELECT * FROM bbdd.group_members";
+		List<Group_members> grupi = jdbobject.query(sql,new GroupMenbersMapper());
+		return grupi;
 	}
 
 	public void delete(int id) {
-		// TODO Auto-generated method stub
+		String sql="delete from bbdd.group_members where  id= ?";
+		jdbobject.update(sql, id);
+		System.out.println("Deleted al usuario = " + id);
 		
 	}
 
 	public void update(int id, String username, int group_id) {
-		// TODO Auto-generated method stub
+		String sql="UPDATE bbdd.group_members set id = ? where username = ?";
+		jdbobject.update(sql, id,username);
+		System.out.println("Updated usuario = " + username);
+		
+	}
+	public void update1(int id, String username, int group_id) {
+		String sql="UPDATE bbdd.group_members set username = ? where group_id = ?";
+		jdbobject.update(sql, username,group_id);
+		System.out.println("Updated usuario al grupo = " + group_id);
 		
 	}
 
