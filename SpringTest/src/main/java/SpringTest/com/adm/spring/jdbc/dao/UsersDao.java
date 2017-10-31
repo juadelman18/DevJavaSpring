@@ -13,6 +13,7 @@ public interface UsersDao {
 	public Users selectById(String user);
 	public List<Users> selectAll();
 	public void delete(String  user);
-	public void update(String user, String password, boolean enabled);
+	public void updateEnable(boolean enabled ,String user );
+	public void updatePassw(String password, String user);
 
 }

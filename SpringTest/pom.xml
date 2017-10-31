@@ -42,7 +42,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.10</version>
 	</dependency>
-	
+	<!-- Librerias para Aspectos -->
+	<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.4</version>
+		</dependency>
 			
   </dependencies>
 

@@ -3,9 +3,8 @@ package SpringTest.com.adm.spring.jdbc.dao.imp;
 import java.util.List;
 
 import javax.sql.DataSource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-
 import SpringTest.com.adm.spring.jdbc.dao.GroupMembersDao;
 import SpringTest.com.adm.spring.jdbc.mappers.GroupMenbersMapper;
 import SpringTest.com.adm.spring.jdbc.mappers.UsersMapper;
@@ -17,6 +16,8 @@ public class GroupMembersDaoImp implements GroupMembersDao{
 	private DataSource datasource;
 	private JdbcTemplate jdbobject;
 
+	
+	@Autowired
 	public void setDataSource(DataSource ds) {	
 		this.datasource=ds;
 		this.jdbobject = new JdbcTemplate();
